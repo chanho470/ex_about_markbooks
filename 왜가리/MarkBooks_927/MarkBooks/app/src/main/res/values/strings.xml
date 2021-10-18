@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MarkBooks</string>
+    <string name="user_book">"읽은 책"</string>
+    <string name="user_hl">"하이라이트"</string>
+    <string name="novel">"소설"</string>
+    <string name="essay">"시/에세이"</string>
+    <string name="humanities">"인문"</string>
+    <string name="economy">"비지니스/경제"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_hint">책 제목, 작가, 장르 검색</string>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Post2Activity">
+
+    <TextView
+        android:id="@+id/post2_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_margin="16dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:text="Title"/>
+    <TextView
+        android:id="@+id/post2_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginStart="8dp"
+        android:textColor="@android:color/holo_green_dark"
+        android:text="Author"/>
+    <TextView
+        android:id="@+id/post2_publish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="25sp"
+        android:layout_marginStart="8dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:text="publish"/>
+    <TextView
+        android:id="@+id/post2_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="25sp"
+        android:layout_marginStart="8dp"
+        android:textColor="@android:color/holo_orange_light"
+        android:text="name"/>
+
+</LinearLayout>

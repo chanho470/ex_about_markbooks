@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks_fin/MarkBooks/app/src/main/res/drawable/ic_arrow_up.xml" value="0.3640625" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks_fin/MarkBooks/app/src/main/res/layout/activity_main.xml" value="0.35139400315623354" />
+        <entry key="..\:/Users/chltn/.gradle/caches/transforms-3/ccd6c517801f56e7200472775579e27c/transformed/appcompat-1.3.1/res/layout/abc_search_view.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/chltn/AndroidStudioProjects/MarkBooks_fin (2)/MarkBooks/app/src/main/res/drawable/bg_custom_button.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/chltn/AndroidStudioProjects/MarkBooks_fin (2)/MarkBooks/app/src/main/res/drawable/border2.xml" value="0.32760416666666664" />
+        <entry key="..\:/Users/chltn/AndroidStudioProjects/MarkBooks_fin (2)/MarkBooks/app/src/main/res/drawable/hl_edge.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/chltn/AndroidStudioProjects/MarkBooks_fin (2)/MarkBooks/app/src/main/res/layout/activity_highlight.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chltn/AndroidStudioProjects/MarkBooks_fin (2)/MarkBooks/app/src/main/res/layout/activity_highlight2.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chltn/AndroidStudioProjects/MarkBooks_fin (2)/MarkBooks/app/src/main/res/layout/activity_main.xml" value="0.31606765327695563" />
+        <entry key="..\:/Users/chltn/AndroidStudioProjects/MarkBooks_fin (2)/MarkBooks/app/src/main/res/layout/activity_mybook.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chltn/AndroidStudioProjects/MarkBooks_fin (2)/MarkBooks/app/src/main/res/layout/activity_posting.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chltn/AndroidStudioProjects/MarkBooks_fin (2)/MarkBooks/app/src/main/res/layout/item_highlight.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chltn/AndroidStudioProjects/MarkBooks_fin (2)/MarkBooks/app/src/main/res/menu/search_menu.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

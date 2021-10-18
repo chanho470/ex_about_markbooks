@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="company_names">
+        <item>Google</item>
+        <item>Apple</item>
+        <item>Microsoft</item>
+        <item>Oracle</item>
+        <item>Facebook</item>
+        <item>Amazon</item>
+        <item>Netflix</item>
+        <item>Twitter</item>
+        <item>Kakao</item>
+        <item>Naver</item>
+        <item>AMD</item>
+        <item>Intel</item>
+        <item>Nvidia</item>
+    </string-array>
+</resources>

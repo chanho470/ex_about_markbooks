@@ -1,0 +1,177 @@
+package com.example.markbooks;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+
+public class MyBookActivity extends AppCompatActivity {
+    private RecyclerView recyclerView;
+    private MyBookAdapter adapter;
+    private FirebaseFirestore fStore = FirebaseFirestore.getInstance();
+
+
+    // 툴바
+    private DrawerLayout mDrawerLayout;
+    private Toolbar toolbar;
+
+    String userID;
+    FirebaseAuth mAuth;
+    FirebaseStorage storage = FirebaseStorage.getInstance("gs://markbooks-8df8a.appspot.com");
+    StorageReference storageRef = storage.getReference();
+
+    private ImageView bookImage;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_mybook);
+
+        InitializeLayout();
+
+        mAuth = FirebaseAuth.getInstance();
+        userID = mAuth.getCurrentUser().getUid();
+
+        recyclerView = (RecyclerView) findViewById(R.id.resultTitleRecycler);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false); //VERTICAL 위아래  HORIZONTAL 좌우
+        recyclerView.setLayoutManager(layoutManager);
+        adapter = new MyBookAdapter(getApplicationContext());
+
+        // data
+        fStore.collection("user").document(userID).collection("favorite")
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        for (DocumentSnapshot ds : queryDocumentSnapshots.getDocuments()) {
+                            //Intent dataIntent = getIntent();
+//                            String Bookname;
+//                            Bookname = dataIntent.getStringExtra("검색어");
+
+
+                            String title = (String) ds.get("title");
+                            String author = (String) ds.get("author");
+                            String genre = (String) ds.get("genre");
+                            //Task<Uri> pic = storageRef.child("Book img").child(title+".jpg").getDownloadUrl();
+
+                            adapter.addItem(new Book(title, author, genre));
+                            recyclerView.setAdapter(adapter);
+
+
+//                            bookImage = findViewById(R.id.bookImage);
+////                            storageRef.child("Book img").child(Bookname+".jpg").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+////                                @Override
+////                                public void onSuccess(Uri uri) {
+////                                    Glide.with(getApplicationContext())
+////                                            .load(uri)
+////                                            .into(bookImage);
+////                                }
+////                            });
+                        }
+
+                    }
+                });
+
+
+
+
+        adapter.setOnItemClickListener(new MyBookAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(MyBookAdapter.MyViewHolder holder, View view, int position) {
+                Intent intent = new Intent(getApplicationContext(), BookInfoActivity.class);
+                intent.putExtra("검색어", adapter.getItem(position).getTitle());
+                startActivity(intent);
+            }
+        });
+
+
+
+    }
+
+    //툴바
+    private void InitializeLayout() {
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowTitleEnabled(false); // 기존 title 지우기
+        actionBar.setDisplayHomeAsUpEnabled(true); // 뒤로가기 버튼 만들기
+        actionBar.setHomeAsUpIndicator(R.drawable.menu_white); //뒤로가기 버튼 이미지 지정
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                menuItem.setChecked(true);
+                mDrawerLayout.closeDrawers();
+
+                int id = menuItem.getItemId();
+                String title = menuItem.getTitle().toString();
+
+                if (id == R.id.mybook) {
+                    mybook();
+                } else if (id == R.id.highlight) {
+                    hlList();
+                } else if (id == R.id.post) {
+                    posting();
+                }
+                return true;
+            }
+        });
+    }
+
+    // 메뉴 버튼
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{ // 왼쪽 상단 버튼 눌렀을 때
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    // 메뉴에서 읽은 책 선택
+    public void mybook() {
+        Intent intent = new Intent(getApplicationContext(), MyBookActivity.class);
+        startActivity(intent);
+    }
+
+    // 메뉴에서 하이라이트 선택
+    public void hlList() {
+        Intent intent = new Intent(getApplicationContext(), HighlightActivity.class);
+        startActivity(intent);
+    }
+
+    public void posting() {
+        Intent intent = new Intent(getApplicationContext(), PostingActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickButton(View view) {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+    }
+}

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".HomeFragment">
+
+        <com.sothree.slidinguppanel.SlidingUpPanelLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sliding_layout"
+            android:gravity="bottom"
+            android:layout_marginBottom="-50dp"
+            app:umanoPanelHeight="110dp"
+            app:umanoShadowHeight="4dp"
+            android:background="@color/colorPrimaryDark">
+
+            <RelativeLayout
+                android:id="@+id/upperRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary">
+
+                <ImageButton
+                    android:id="@+id/imageButton1"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/back_white"
+                    tools:layout_editor_absoluteX="96dp"
+                    tools:layout_editor_absoluteY="68dp"
+                    android:onClick="clickButton"/>
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="65dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="-6dp"
+                    android:layout_marginStart="330dp"
+                    android:backgroundTint="#00FFFFFF"
+                    app:srcCompat="@drawable/shoppingcart"
+                    android:onClick="Hyperlink"
+                    android:scaleType="fitXY"/>
+
+                <ImageView
+                    android:id="@+id/pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="245dp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="380dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="265dp"
+                    android:autoSizeMaxTextSize="20sp"
+                    android:autoSizeMinTextSize="15sp"
+                    android:autoSizeTextType="uniform"
+                    android:font="@font/nanumgothic_extrabold"
+                    android:text="제목"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pic" />
+
+                <TextView
+                    android:id="@+id/author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="310dp"
+                    android:font="@font/nanumgothic_bold"
+                    android:text="저자"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/title"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ToggleButton
+                    android:id="@+id/button_favorite"
+                    android:layout_width="41dp"
+                    android:layout_height="38dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="300dp"
+                    android:layout_marginRight="45dp"
+                    android:background="@drawable/button_favorite"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="350dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/publisher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="360dp"
+                    android:font="@font/nanumgothic"
+                    android:text="출판사"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    app:layout_constraintLeft_toRightOf="@id/author"
+                    app:layout_constraintStart_toEndOf="@id/author"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/genre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="210dp"
+                    android:layout_marginTop="360dp"
+                    android:font="@font/nanumgothic"
+                    android:text="장르"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.907" />
+
+                <TextView
+                    android:id="@+id/year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="390dp"
+                    android:font="@font/nanumgothic_light"
+                    android:text="출간일"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="430dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="450dp"
+                    android:layout_marginBottom="10dp"
+                    android:font="@font/cerapro_regular"
+                    android:text="| 관련 추천작 |"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horzontal1"
+                    android:layout_width="390dp"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="475dp"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/Recommend1"
+                            android:layout_width="110dp"
+                            android:layout_height="170dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@android:color/transparent"
+                            android:onClick="handleSelection"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <ImageButton
+                            android:id="@+id/Recommend2"
+                            android:layout_width="110dp"
+                            android:layout_height="170dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@android:color/transparent"
+                            android:onClick="handleSelection"
+                            app:layout_constraintStart_toEndOf="@id/Recommend1"
+                            app:layout_constraintTop_toTopOf="@id/Recommend1"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <ImageButton
+                            android:id="@+id/Recommend3"
+                            android:layout_width="110dp"
+                            android:layout_height="170dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@android:color/transparent"
+                            android:onClick="handleSelection"
+                            app:layout_constraintStart_toEndOf="@id/Recommend2"
+                            app:layout_constraintTop_toTopOf="@id/Recommend2"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+
+                        <ImageButton
+                            android:id="@+id/Recommend4"
+                            android:layout_width="110dp"
+                            android:layout_height="170dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@android:color/transparent"
+                            android:onClick="handleSelection"
+                            app:layout_constraintStart_toEndOf="@id/Recommend3"
+                            app:layout_constraintTop_toTopOf="@id/Recommend3"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <ImageButton
+                            android:id="@+id/Recommend5"
+                            android:layout_width="110dp"
+                            android:layout_height="170dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@android:color/transparent"
+                            android:onClick="handleSelection"
+                            app:layout_constraintStart_toEndOf="@id/Recommend4"
+                            app:layout_constraintTop_toTopOf="@id/Recommend4"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <ImageButton
+                            android:id="@+id/Recommend6"
+                            android:layout_width="110dp"
+                            android:layout_height="170dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@android:color/transparent"
+                            android:onClick="handleSelection"
+                            app:layout_constraintStart_toEndOf="@id/Recommend5"
+                            app:layout_constraintTop_toTopOf="@id/Recommend5"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </HorizontalScrollView>
+            </RelativeLayout>
+            <include layout="@layout/sliding_window_layout"/>
+        </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:contentPadding="3dp"
+        app:cardBackgroundColor="#FFF47D">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="126dp">
+
+            <ImageButton
+                android:id="@+id/delete_btn"
+                android:layout_width="18dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="9dp"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/trash" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="74dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                app:srcCompat="@drawable/book" />
+
+            <TextView
+                android:id="@+id/item_hl_title"
+                android:layout_width="244dp"
+                android:layout_height="32dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="23dp"
+                android:layout_toEndOf="@+id/imageView"
+                android:autoSizeMaxTextSize="8sp"
+                android:fontFamily="@font/wemakeprice_bold"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="title"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/texthighlight"
+                android:layout_width="247dp"
+                android:layout_height="58dp"
+                android:layout_below="@+id/item_hl_title"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@+id/imageView"
+                android:background="@drawable/border"
+                android:fontFamily="@font/wemakeprice_regular"
+                android:padding="10dp"
+                android:text="highlight"
+                android:textAlignment="viewStart"
+                android:textColor="#0C0C0C" />
+
+            <TextView
+                android:id="@+id/texttime"
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="208dp"
+                android:layout_marginBottom="102dp"
+                android:fontFamily="@font/wemakeprice_regular"
+                android:text="time"
+                android:textAlignment="viewEnd" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

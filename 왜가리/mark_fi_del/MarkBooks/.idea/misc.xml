@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks0930_1/MarkBooks/app/src/main/res/layout/activity_bookinfo.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks0930_1/MarkBooks/app/src/main/res/layout/activity_highlight.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks0930_1/MarkBooks/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks0930_1/MarkBooks/app/src/main/res/layout/activity_mybook.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks0930_1/MarkBooks/app/src/main/res/layout/activity_post.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks0930_1/MarkBooks/app/src/main/res/layout/activity_post2.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks0930_1/MarkBooks/app/src/main/res/layout/activity_posting.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks0930_1/MarkBooks/app/src/main/res/layout/activity_search.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks0930_1/MarkBooks/app/src/main/res/layout/activity_searchresult.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks0930_1/MarkBooks/app/src/main/res/layout/item_highlight.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks0930_1/MarkBooks/app/src/main/res/layout/item_mybook.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks0930_1/MarkBooks/app/src/main/res/layout/item_post.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks0930_1/MarkBooks/app/src/main/res/layout/item_result.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks0930_1/MarkBooks/app/src/main/res/layout/item_search.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/MarkBooks0930_1/MarkBooks/app/src/main/res/layout/sliding_window_layout.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/mark_fi_del/MarkBooks/app/src/main/res/layout/item_highlight.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/mark_fi_del/MarkBooks/app/src/main/res/layout/item_post.xml" value="0.30925925925925923" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/mark_fi_del/MarkBooks/app/src/main/res/layout/item_result.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/chanh/AndroidStudioProjects/mark_fi_del/MarkBooks/app/src/main/res/layout/item_search.xml" value="0.3619791666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

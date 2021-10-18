@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="1dp"
+        app:cardBackgroundColor="#788899"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/item_post_title"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:singleLine="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:text="title"
+            android:textSize="20dp"
+            android:autoSizeMaxTextSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="130dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="45dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/item_post_nickname"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="230dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="nickname"
+            android:textColor="@color/white"
+            android:autoSizeMaxTextSize="8sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/popup_btn"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:background="#788899"
+                android:src="@drawable/ic_popup"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="330dp"/>
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/texttime"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:text="time"
+            android:textAlignment="viewEnd" />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
